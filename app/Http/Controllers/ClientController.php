@@ -9,6 +9,7 @@ use App\Models\Service;
 use App\Models\User;
 use Carbon\Carbon;
 use App\Models\Task;
+use Spatie\SlackAlerts\Facades\SlackAlert;
 use RealRashid\SweetAlert\Facades\Alert;
 
 
@@ -90,8 +91,16 @@ class ClientController extends Controller
      */
     public function show($id)
     {
+
         $client = Client::with('services', 'users')->find($id);
         $sale = Sales::find($client->sales_id);
+        // dd($sale);
+        $reportdate = Carbon::parse($client->reporting_date);
+        $reportday = $reportdate->format('d');
+        // dd($reportday);
+        // Carbon::parse()
+        $currentmonth = Carbon::now()->format('F');
+        SlackAlert::message("Reporting Date of {$sale->business_name} is {$reportday} {$currentmonth} ! ");
         return view('client.show', compact('client','sale', ));
     }
 
