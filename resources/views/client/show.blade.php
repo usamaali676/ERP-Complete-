@@ -63,7 +63,7 @@
                     </div> --}}
                 </div>
                 <div class="flex items-center justify-center lg:justify-start pt-3">
-                    <div class="mr-2 w-50 flex"> Reporting Date: <span class="ml-3 font-medium text-danger">{{ date('d F', strtotime($client->reporting_date)) }}</span> </div>
+                    <div class="mr-2 w-50 flex"> Reporting Date: <span class="ml-3 font-medium text-danger">{{ date('d ', strtotime($client->reporting_date)) }}{{ date('F') }}</span> </div>
                     {{-- <div class="w-3/4">
                         <div class="h-[55px]">
                             <canvas class="simple-line-chart-2 -mr-5"></canvas>
