@@ -126,28 +126,28 @@
                             <div class="flex flex-col sm:flex-row mt-2">
                                 <div class="form-check mr-2">
                                     <input class="form-check-input" type="hidden" value="0" name="desig_create">
-                                    <input id="checkbox-switch-11" class="form-check-input" type="checkbox" value="1" name="desig_create" >
-                                    <label class="form-check-label" for="checkbox-switch-11">Create</label>
+                                    <input id="checkbox-switch-16" class="form-check-input" type="checkbox" value="1" name="desig_create" >
+                                    <label class="form-check-label" for="checkbox-switch-16">Create</label>
                                 </div>
                                 <div class="form-check mr-2">
                                     <input class="form-check-input" type="hidden" value="0" name="desig_view">
-                                    <input id="checkbox-switch-12" class="form-check-input" type="checkbox" value="1" name="desig_view" >
-                                    <label class="form-check-label" for="checkbox-switch-12">View</label>
+                                    <input id="checkbox-switch-17" class="form-check-input" type="checkbox" value="1" name="desig_view" >
+                                    <label class="form-check-label" for="checkbox-switch-17">View</label>
                                 </div>
                                 <div class="form-check mr-2 mt-2 sm:mt-0">
                                     <input class="form-check-input" type="hidden" value="0" name="desig_edit">
-                                    <input id="checkbox-switch-13" class="form-check-input" type="checkbox" value="1" name="desig_edit" >
-                                    <label class="form-check-label" for="checkbox-switch-13">Edit</label>
+                                    <input id="checkbox-switch-18" class="form-check-input" type="checkbox" value="1" name="desig_edit" >
+                                    <label class="form-check-label" for="checkbox-switch-18">Edit</label>
                                 </div>
                                 <div class="form-check mr-2 mt-2 sm:mt-0">
                                     <input class="form-check-input" type="hidden" value="0" name="desig_update">
-                                    <input id="checkbox-switch-14" class="form-check-input" type="checkbox" value="1" name="desig_update" >
-                                    <label class="form-check-label" for="checkbox-switch-14">Update</label>
+                                    <input id="checkbox-switch-19" class="form-check-input" type="checkbox" value="1" name="desig_update" >
+                                    <label class="form-check-label" for="checkbox-switch-19">Update</label>
                                 </div>
                                 <div class="form-check mr-2 mt-2 sm:mt-0">
                                     <input class="form-check-input" type="hidden" value="0" name="desig_delete">
-                                    <input id="checkbox-switch-15" class="form-check-input" type="checkbox" value="1" name="desig_delete" >
-                                    <label class="form-check-label" for="checkbox-switch-15">Delete</label>
+                                    <input id="checkbox-switch-20" class="form-check-input" type="checkbox" value="1" name="desig_delete" >
+                                    <label class="form-check-label" for="checkbox-switch-20">Delete</label>
                                 </div>
                             </div>
                         </div>
@@ -156,28 +156,28 @@
                             <div class="flex flex-col sm:flex-row mt-2">
                                 <div class="form-check mr-2">
                                     <input class="form-check-input" type="hidden" value="0" name="veh_create">
-                                    <input id="checkbox-switch-11" class="form-check-input" type="checkbox" value="1" name="veh_create" >
-                                    <label class="form-check-label" for="checkbox-switch-11">Create</label>
+                                    <input id="checkbox-switch-21" class="form-check-input" type="checkbox" value="1" name="veh_create" >
+                                    <label class="form-check-label" for="checkbox-switch-21">Create</label>
                                 </div>
                                 <div class="form-check mr-2">
                                     <input class="form-check-input" type="hidden" value="0" name="veh_view">
-                                    <input id="checkbox-switch-12" class="form-check-input" type="checkbox" value="1" name="veh_view" >
-                                    <label class="form-check-label" for="checkbox-switch-12">View</label>
+                                    <input id="checkbox-switch-22" class="form-check-input" type="checkbox" value="1" name="veh_view" >
+                                    <label class="form-check-label" for="checkbox-switch-22">View</label>
                                 </div>
                                 <div class="form-check mr-2 mt-2 sm:mt-0">
                                     <input class="form-check-input" type="hidden" value="0" name="veh_edit">
-                                    <input id="checkbox-switch-13" class="form-check-input" type="checkbox" value="1" name="veh_edit" >
-                                    <label class="form-check-label" for="checkbox-switch-13">Edit</label>
+                                    <input id="checkbox-switch-23" class="form-check-input" type="checkbox" value="1" name="veh_edit" >
+                                    <label class="form-check-label" for="checkbox-switch-23">Edit</label>
                                 </div>
                                 <div class="form-check mr-2 mt-2 sm:mt-0">
                                     <input class="form-check-input" type="hidden" value="0" name="veh_update">
-                                    <input id="checkbox-switch-14" class="form-check-input" type="checkbox" value="1" name="veh_update" >
-                                    <label class="form-check-label" for="checkbox-switch-14">Update</label>
+                                    <input id="checkbox-switch-24" class="form-check-input" type="checkbox" value="1" name="veh_update" >
+                                    <label class="form-check-label" for="checkbox-switch-24">Update</label>
                                 </div>
                                 <div class="form-check mr-2 mt-2 sm:mt-0">
                                     <input class="form-check-input" type="hidden" value="0" name="veh_delete">
-                                    <input id="checkbox-switch-15" class="form-check-input" type="checkbox" value="1" name="veh_delete" >
-                                    <label class="form-check-label" for="checkbox-switch-15">Delete</label>
+                                    <input id="checkbox-switch-25" class="form-check-input" type="checkbox" value="1" name="veh_delete" >
+                                    <label class="form-check-label" for="checkbox-switch-25">Delete</label>
                                 </div>
                             </div>
                         </div>
@@ -186,28 +186,28 @@
                             <div class="flex flex-col sm:flex-row mt-2">
                                 <div class="form-check mr-2">
                                     <input class="form-check-input" type="hidden" value="0" name="holiday_create">
-                                    <input id="checkbox-switch-11" class="form-check-input" type="checkbox" value="1" name="holiday_create" >
-                                    <label class="form-check-label" for="checkbox-switch-11">Create</label>
+                                    <input id="checkbox-switch-26" class="form-check-input" type="checkbox" value="1" name="holiday_create" >
+                                    <label class="form-check-label" for="checkbox-switch-26">Create</label>
                                 </div>
                                 <div class="form-check mr-2">
                                     <input class="form-check-input" type="hidden" value="0" name="holiday_view">
-                                    <input id="checkbox-switch-12" class="form-check-input" type="checkbox" value="1" name="holiday_view" >
-                                    <label class="form-check-label" for="checkbox-switch-12">View</label>
+                                    <input id="checkbox-switch-27" class="form-check-input" type="checkbox" value="1" name="holiday_view" >
+                                    <label class="form-check-label" for="checkbox-switch-27">View</label>
                                 </div>
                                 <div class="form-check mr-2 mt-2 sm:mt-0">
                                     <input class="form-check-input" type="hidden" value="0" name="holiday_edit">
-                                    <input id="checkbox-switch-13" class="form-check-input" type="checkbox" value="1" name="holiday_edit" >
-                                    <label class="form-check-label" for="checkbox-switch-13">Edit</label>
+                                    <input id="checkbox-switch-28" class="form-check-input" type="checkbox" value="1" name="holiday_edit" >
+                                    <label class="form-check-label" for="checkbox-switch-28">Edit</label>
                                 </div>
                                 <div class="form-check mr-2 mt-2 sm:mt-0">
                                     <input class="form-check-input" type="hidden" value="0" name="holiday_update">
-                                    <input id="checkbox-switch-14" class="form-check-input" type="checkbox" value="1" name="holiday_update" >
-                                    <label class="form-check-label" for="checkbox-switch-14">Update</label>
+                                    <input id="checkbox-switch-29" class="form-check-input" type="checkbox" value="1" name="holiday_update" >
+                                    <label class="form-check-label" for="checkbox-switch-29">Update</label>
                                 </div>
                                 <div class="form-check mr-2 mt-2 sm:mt-0">
                                     <input class="form-check-input" type="hidden" value="0" name="holiday_delete">
-                                    <input id="checkbox-switch-15" class="form-check-input" type="checkbox" value="1" name="holiday_delete" >
-                                    <label class="form-check-label" for="checkbox-switch-15">Delete</label>
+                                    <input id="checkbox-switch-30" class="form-check-input" type="checkbox" value="1" name="holiday_delete" >
+                                    <label class="form-check-label" for="checkbox-switch-30">Delete</label>
                                 </div>
                             </div>
                         </div>
@@ -246,28 +246,28 @@
                             <div class="flex flex-col sm:flex-row mt-2">
                                 <div class="form-check mr-2">
                                     <input class="form-check-input" type="hidden" value="0" name="sheet_create">
-                                    <input id="checkbox-switch-11" class="form-check-input" type="checkbox" value="1" name="sheet_create" >
-                                    <label class="form-check-label" for="checkbox-switch-11">Create</label>
+                                    <input id="checkbox-switch-31" class="form-check-input" type="checkbox" value="1" name="sheet_create" >
+                                    <label class="form-check-label" for="checkbox-switch-31">Create</label>
                                 </div>
                                 <div class="form-check mr-2">
                                     <input class="form-check-input" type="hidden" value="0" name="sheet_view">
-                                    <input id="checkbox-switch-12" class="form-check-input" type="checkbox" value="1" name="sheet_view" >
-                                    <label class="form-check-label" for="checkbox-switch-12">View</label>
+                                    <input id="checkbox-switch-32" class="form-check-input" type="checkbox" value="1" name="sheet_view" >
+                                    <label class="form-check-label" for="checkbox-switch-32">View</label>
                                 </div>
                                 <div class="form-check mr-2 mt-2 sm:mt-0">
                                     <input class="form-check-input" type="hidden" value="0" name="sheet_edit">
-                                    <input id="checkbox-switch-13" class="form-check-input" type="checkbox" value="1" name="sheet_edit" >
-                                    <label class="form-check-label" for="checkbox-switch-13">Edit</label>
+                                    <input id="checkbox-switch-33" class="form-check-input" type="checkbox" value="1" name="sheet_edit" >
+                                    <label class="form-check-label" for="checkbox-switch-33">Edit</label>
                                 </div>
                                 <div class="form-check mr-2 mt-2 sm:mt-0">
                                     <input class="form-check-input" type="hidden" value="0" name="sheet_update">
-                                    <input id="checkbox-switch-14" class="form-check-input" type="checkbox" value="1" name="sheet_update" >
-                                    <label class="form-check-label" for="checkbox-switch-14">Update</label>
+                                    <input id="checkbox-switch-34" class="form-check-input" type="checkbox" value="1" name="sheet_update" >
+                                    <label class="form-check-label" for="checkbox-switch-34">Update</label>
                                 </div>
                                 <div class="form-check mr-2 mt-2 sm:mt-0">
                                     <input class="form-check-input" type="hidden" value="0" name="sheet_delete">
-                                    <input id="checkbox-switch-15" class="form-check-input" type="checkbox" value="1" name="sheet_delete" >
-                                    <label class="form-check-label" for="checkbox-switch-15">Delete</label>
+                                    <input id="checkbox-switch-35" class="form-check-input" type="checkbox" value="1" name="sheet_delete" >
+                                    <label class="form-check-label" for="checkbox-switch-35">Delete</label>
                                 </div>
                             </div>
                         </div>
@@ -276,28 +276,28 @@
                             <div class="flex flex-col sm:flex-row mt-2">
                                 <div class="form-check mr-2">
                                     <input class="form-check-input" type="hidden" value="0" name="cmnt_create">
-                                    <input id="checkbox-switch-16" class="form-check-input" type="checkbox" value="1" name="cmnt_create" >
-                                    <label class="form-check-label" for="checkbox-switch-16">Create</label>
+                                    <input id="checkbox-switch-36" class="form-check-input" type="checkbox" value="1" name="cmnt_create" >
+                                    <label class="form-check-label" for="checkbox-switch-36">Create</label>
                                 </div>
                                 <div class="form-check mr-2">
                                     <input class="form-check-input" type="hidden" value="0" name="cmnt_view">
-                                    <input id="checkbox-switch-17" class="form-check-input" type="checkbox" value="1" name="cmnt_view" >
-                                    <label class="form-check-label" for="checkbox-switch-17">View</label>
+                                    <input id="checkbox-switch-37" class="form-check-input" type="checkbox" value="1" name="cmnt_view" >
+                                    <label class="form-check-label" for="checkbox-switch-37">View</label>
                                 </div>
                                 <div class="form-check mr-2 mt-2 sm:mt-0">
                                     <input class="form-check-input" type="hidden" value="0" name="cmnt_edit">
-                                    <input id="checkbox-switch-18" class="form-check-input" type="checkbox" value="1" name="cmnt_edit" >
-                                    <label class="form-check-label" for="checkbox-switch-18">Edit</label>
+                                    <input id="checkbox-switch-38" class="form-check-input" type="checkbox" value="1" name="cmnt_edit" >
+                                    <label class="form-check-label" for="checkbox-switch-38">Edit</label>
                                 </div>
                                 <div class="form-check mr-2 mt-2 sm:mt-0">
                                     <input class="form-check-input" type="hidden" value="0" name="cmnt_update">
-                                    <input id="checkbox-switch-19" class="form-check-input" type="checkbox" value="1" name="cmnt_update" >
-                                    <label class="form-check-label" for="checkbox-switch-19">Update</label>
+                                    <input id="checkbox-switch-39" class="form-check-input" type="checkbox" value="1" name="cmnt_update" >
+                                    <label class="form-check-label" for="checkbox-switch-39">Update</label>
                                 </div>
                                 <div class="form-check mr-2 mt-2 sm:mt-0">
                                     <input class="form-check-input" type="hidden" value="0" name="cmnt_delete">
-                                    <input id="checkbox-switch-20" class="form-check-input" type="checkbox" value="1" name="cmnt_delete" >
-                                    <label class="form-check-label" for="checkbox-switch-20">Delete</label>
+                                    <input id="checkbox-switch-40" class="form-check-input" type="checkbox" value="1" name="cmnt_delete" >
+                                    <label class="form-check-label" for="checkbox-switch-40">Delete</label>
                                 </div>
                             </div>
                         </div>
@@ -306,28 +306,88 @@
                             <div class="flex flex-col sm:flex-row mt-2">
                                 <div class="form-check mr-2">
                                     <input class="form-check-input" type="hidden" value="0" name="finance_create">
-                                    <input id="checkbox-switch-16" class="form-check-input" type="checkbox" value="1" name="finance_create" >
-                                    <label class="form-check-label" for="checkbox-switch-16">Create</label>
+                                    <input id="checkbox-switch-41" class="form-check-input" type="checkbox" value="1" name="finance_create" >
+                                    <label class="form-check-label" for="checkbox-switch-41">Create</label>
                                 </div>
                                 <div class="form-check mr-2">
                                     <input class="form-check-input" type="hidden" value="0" name="finance_view">
-                                    <input id="checkbox-switch-17" class="form-check-input" type="checkbox" value="1" name="finance_view" >
-                                    <label class="form-check-label" for="checkbox-switch-17">View</label>
+                                    <input id="checkbox-switch-42" class="form-check-input" type="checkbox" value="1" name="finance_view" >
+                                    <label class="form-check-label" for="checkbox-switch-42">View</label>
                                 </div>
                                 <div class="form-check mr-2 mt-2 sm:mt-0">
                                     <input class="form-check-input" type="hidden" value="0" name="finance_edit">
-                                    <input id="checkbox-switch-18" class="form-check-input" type="checkbox" value="1" name="finance_edit" >
-                                    <label class="form-check-label" for="checkbox-switch-18">Edit</label>
+                                    <input id="checkbox-switch-43" class="form-check-input" type="checkbox" value="1" name="finance_edit" >
+                                    <label class="form-check-label" for="checkbox-switch-43">Edit</label>
                                 </div>
                                 <div class="form-check mr-2 mt-2 sm:mt-0">
                                     <input class="form-check-input" type="hidden" value="0" name="finance_update">
-                                    <input id="checkbox-switch-19" class="form-check-input" type="checkbox" value="1" name="finance_update" >
-                                    <label class="form-check-label" for="checkbox-switch-19">Update</label>
+                                    <input id="checkbox-switch-44" class="form-check-input" type="checkbox" value="1" name="finance_update" >
+                                    <label class="form-check-label" for="checkbox-switch-44">Update</label>
                                 </div>
                                 <div class="form-check mr-2 mt-2 sm:mt-0">
                                     <input class="form-check-input" type="hidden" value="0" name="finance_delete">
-                                    <input id="checkbox-switch-20" class="form-check-input" type="checkbox" value="1" name="finance_delete" >
-                                    <label class="form-check-label" for="checkbox-switch-20">Delete</label>
+                                    <input id="checkbox-switch-45" class="form-check-input" type="checkbox" value="1" name="finance_delete" >
+                                    <label class="form-check-label" for="checkbox-switch-45">Delete</label>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="mt-3">
+                            <label for="regular-form-3" class="form-label">Projrcts</label>
+                            <div class="flex flex-col sm:flex-row mt-2">
+                                <div class="form-check mr-2">
+                                    <input class="form-check-input" type="hidden" value="0" name="clients_create">
+                                    <input id="checkbox-switch-46" class="form-check-input" type="checkbox" value="1" name="clients_create" >
+                                    <label class="form-check-label" for="checkbox-switch-46">Create</label>
+                                </div>
+                                <div class="form-check mr-2">
+                                    <input class="form-check-input" type="hidden" value="0" name="clients_view">
+                                    <input id="checkbox-switch-47" class="form-check-input" type="checkbox" value="1" name="clients_view" >
+                                    <label class="form-check-label" for="checkbox-switch-47">View</label>
+                                </div>
+                                <div class="form-check mr-2 mt-2 sm:mt-0">
+                                    <input class="form-check-input" type="hidden" value="0" name="clients_edit">
+                                    <input id="checkbox-switch-48" class="form-check-input" type="checkbox" value="1" name="clients_edit" >
+                                    <label class="form-check-label" for="checkbox-switch-48">Edit</label>
+                                </div>
+                                <div class="form-check mr-2 mt-2 sm:mt-0">
+                                    <input class="form-check-input" type="hidden" value="0" name="clients_update">
+                                    <input id="checkbox-switch-49" class="form-check-input" type="checkbox" value="1" name="clients_update" >
+                                    <label class="form-check-label" for="checkbox-switch-49">Update</label>
+                                </div>
+                                <div class="form-check mr-2 mt-2 sm:mt-0">
+                                    <input class="form-check-input" type="hidden" value="0" name="clients_delete">
+                                    <input id="checkbox-switch-50" class="form-check-input" type="checkbox" value="1" name="clients_delete" >
+                                    <label class="form-check-label" for="checkbox-switch-50">Delete</label>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="mt-3">
+                            <label for="regular-form-3" class="form-label">Services</label>
+                            <div class="flex flex-col sm:flex-row mt-2">
+                                <div class="form-check mr-2">
+                                    <input class="form-check-input" type="hidden" value="0" name="service_create">
+                                    <input id="checkbox-switch-51" class="form-check-input" type="checkbox" value="1" name="service_create" >
+                                    <label class="form-check-label" for="checkbox-switch-51">Create</label>
+                                </div>
+                                <div class="form-check mr-2">
+                                    <input class="form-check-input" type="hidden" value="0" name="service_view">
+                                    <input id="checkbox-switch-52" class="form-check-input" type="checkbox" value="1" name="service_view" >
+                                    <label class="form-check-label" for="checkbox-switch-52">View</label>
+                                </div>
+                                <div class="form-check mr-2 mt-2 sm:mt-0">
+                                    <input class="form-check-input" type="hidden" value="0" name="service_edit">
+                                    <input id="checkbox-switch-53" class="form-check-input" type="checkbox" value="1" name="service_edit" >
+                                    <label class="form-check-label" for="checkbox-switch-53">Edit</label>
+                                </div>
+                                <div class="form-check mr-2 mt-2 sm:mt-0">
+                                    <input class="form-check-input" type="hidden" value="0" name="service_update">
+                                    <input id="checkbox-switch-54" class="form-check-input" type="checkbox" value="1" name="service_update" >
+                                    <label class="form-check-label" for="checkbox-switch-54">Update</label>
+                                </div>
+                                <div class="form-check mr-2 mt-2 sm:mt-0">
+                                    <input class="form-check-input" type="hidden" value="0" name="service_delete">
+                                    <input id="checkbox-switch-55" class="form-check-input" type="checkbox" value="1" name="service_delete" >
+                                    <label class="form-check-label" for="checkbox-switch-55">Delete</label>
                                 </div>
                             </div>
                         </div>

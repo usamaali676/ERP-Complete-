@@ -2,21 +2,24 @@
     $total_task = $client->tasks->count(); // Total count
 
     $complete_task = $client->tasks()->where('status', "Complete")->count();
-    if(isset($complete_task_percent)){ // Current amount
+    if(isset($complete_task)){ // Current amount
     $complete_task_percent = ($complete_task / $total_task) * 100;
     }
     else{
         $complete_task_percent = 0;
     }
     $pending_task = $client->tasks()->where('status', "Not Started")->count();
-    if(isset($pending_task_percent)){ // Current amount
+    // dd($pending_task);
+    if(isset($pending_task)){ // Current amount
+        // dd($pending_task);
     $pending_task_percent = ($pending_task / $total_task) * 100;
+    // dd($pending_task_percent);
     }
     else{
         $pending_task_percent = 0;
     }
     $progress_task = $client->tasks()->where('status', "In progress")->count();
-    if(isset($progress_task_percent)){ // Current amount
+    if(isset($progress_task)){ // Current amount
     $progress_task_percent = ($progress_task / $total_task) * 100;
     }
     else{
@@ -52,6 +55,7 @@
                 <div class="font-medium text-center lg:text-left lg:mt-5">Project Duration</div>
                 <div class="flex items-center justify-center lg:justify-start mt-2">
                     <div class="mr-2 w-50 flex"> Start Date: <span class="ml-3 font-medium text-success">{{$client->start_date}}</span> </div>
+                    {{-- <div class="mr-2 w-50 flex"> Start Date: <span class="ml-3 font-medium text-success">{{$client->reporting_date}}</span> </div> --}}
                     {{-- <div class="w-3/4">
                         <div class="h-[55px]">
                             <canvas class="simple-line-chart-1 -mr-5"></canvas>
@@ -59,7 +63,7 @@
                     </div> --}}
                 </div>
                 <div class="flex items-center justify-center lg:justify-start pt-3">
-                    {{-- <div class="mr-2 w-50 flex"> Due Date: <span class="ml-3 font-medium text-danger">{{$client->last_date}}</span> </div> --}}
+                    <div class="mr-2 w-50 flex"> Reporting Date: <span class="ml-3 font-medium text-danger">{{ date('d F', strtotime($client->reporting_date)) }}</span> </div>
                     {{-- <div class="w-3/4">
                         <div class="h-[55px]">
                             <canvas class="simple-line-chart-2 -mr-5"></canvas>

@@ -331,6 +331,66 @@
                                 </div>
                             </div>
                         </div>
+                        <div class="mt-3">
+                            <label for="regular-form-3" class="form-label">Projrcts</label>
+                            <div class="flex flex-col sm:flex-row mt-2">
+                                <div class="form-check mr-2">
+                                    <input class="form-check-input" type="hidden" value="0" name="clients_create">
+                                    <input id="checkbox-switch-46" class="form-check-input" type="checkbox" value="1" name="clients_create" @if ($perm_clients->create == 1) checked @endif>
+                                    <label class="form-check-label" for="checkbox-switch-46">Create</label>
+                                </div>
+                                <div class="form-check mr-2">
+                                    <input class="form-check-input" type="hidden" value="0" name="clients_view">
+                                    <input id="checkbox-switch-47" class="form-check-input" type="checkbox" value="1" name="clients_view" @if ($perm_clients->view == 1) checked @endif>
+                                    <label class="form-check-label" for="checkbox-switch-47">View</label>
+                                </div>
+                                <div class="form-check mr-2 mt-2 sm:mt-0">
+                                    <input class="form-check-input" type="hidden" value="0" name="clients_edit">
+                                    <input id="checkbox-switch-48" class="form-check-input" type="checkbox" value="1" name="clients_edit" @if ($perm_clients->edit == 1) checked @endif>
+                                    <label class="form-check-label" for="checkbox-switch-48">Edit</label>
+                                </div>
+                                <div class="form-check mr-2 mt-2 sm:mt-0">
+                                    <input class="form-check-input" type="hidden" value="0" name="clients_update">
+                                    <input id="checkbox-switch-49" class="form-check-input" type="checkbox" value="1" name="clients_update" @if ($perm_clients->update == 1) checked @endif>
+                                    <label class="form-check-label" for="checkbox-switch-49">Update</label>
+                                </div>
+                                <div class="form-check mr-2 mt-2 sm:mt-0">
+                                    <input class="form-check-input" type="hidden" value="0" name="clients_delete">
+                                    <input id="checkbox-switch-50" class="form-check-input" type="checkbox" value="1" name="clients_delete" @if ($perm_clients->delete == 1) checked @endif>
+                                    <label class="form-check-label" for="checkbox-switch-50">Delete</label>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="mt-3">
+                            <label for="regular-form-3" class="form-label">Services</label>
+                            <div class="flex flex-col sm:flex-row mt-2">
+                                <div class="form-check mr-2">
+                                    <input class="form-check-input" type="hidden" value="0" name="service_create">
+                                    <input id="checkbox-switch-51" class="form-check-input" type="checkbox" value="1" name="service_create" @if ($perm_service->create == 1) checked @endif>
+                                    <label class="form-check-label" for="checkbox-switch-51">Create</label>
+                                </div>
+                                <div class="form-check mr-2">
+                                    <input class="form-check-input" type="hidden" value="0" name="service_view">
+                                    <input id="checkbox-switch-52" class="form-check-input" type="checkbox" value="1" name="service_view" @if ($perm_service->view == 1) checked @endif>
+                                    <label class="form-check-label" for="checkbox-switch-52">View</label>
+                                </div>
+                                <div class="form-check mr-2 mt-2 sm:mt-0">
+                                    <input class="form-check-input" type="hidden" value="0" name="service_edit">
+                                    <input id="checkbox-switch-53" class="form-check-input" type="checkbox" value="1" name="service_edit" @if ($perm_service->edit == 1) checked @endif>
+                                    <label class="form-check-label" for="checkbox-switch-53">Edit</label>
+                                </div>
+                                <div class="form-check mr-2 mt-2 sm:mt-0">
+                                    <input class="form-check-input" type="hidden" value="0" name="service_update">
+                                    <input id="checkbox-switch-54" class="form-check-input" type="checkbox" value="1" name="service_update" @if ($perm_service->update == 1) checked @endif>
+                                    <label class="form-check-label" for="checkbox-switch-54">Update</label>
+                                </div>
+                                <div class="form-check mr-2 mt-2 sm:mt-0">
+                                    <input class="form-check-input" type="hidden" value="0" name="service_delete">
+                                    <input id="checkbox-switch-55" class="form-check-input" type="checkbox" value="1" name="service_delete" @if ($perm_service->delete == 1) checked @endif>
+                                    <label class="form-check-label" for="checkbox-switch-55">Delete</label>
+                                </div>
+                            </div>
+                        </div>
                         <button type="submit" class="btn btn-primary mt-5">Submit</button>
                     </form>
                 </div>

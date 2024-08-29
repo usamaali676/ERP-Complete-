@@ -17,7 +17,7 @@ class PermsSeeder extends Seeder
     public function run()
     {
         $role = Role::all();
-        $routeCollection = GlobalHelper::Permissions();
+        $routeCollection = ['clients', 'service'];
         foreach($routeCollection as $route){
             foreach($role as $item){
             if($item->id == 1){
@@ -30,6 +30,7 @@ class PermsSeeder extends Seeder
                     'update' => 1,
                     'delete' => 1,
                 ]);
+
             }
             else{
                 Perm::firstOrCreate([
@@ -44,12 +45,5 @@ class PermsSeeder extends Seeder
             }
             }
         }
-        // foreach($role as $item)
-        // {
-        //     Permission::create([
-        //         'name' =>
-        //     ]);
-
-        // }
     }
 }

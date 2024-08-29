@@ -140,6 +140,24 @@ class RoleController extends Controller
                 'update' => $request->finance_update,
                 'delete' => $request->finance_delete,
         ]);
+        perm::create([
+                'name' => "clients",
+                'role_id' => $role->id,
+                'create' => $request->clients_create,
+                'view' => $request->clients_view,
+                'edit' => $request->clients_edit,
+                'update' => $request->clients_update,
+                'delete' => $request->clients_delete,
+        ]);
+        perm::create([
+                'name' => "service",
+                'role_id' => $role->id,
+                'create' => $request->service_create,
+                'view' => $request->service_view,
+                'edit' => $request->service_edit,
+                'update' => $request->service_update,
+                'delete' => $request->service_delete,
+        ]);
 
         Alert::Success('Success' , "Role Added Successfully");
         return redirect()->route('role.index');
@@ -191,7 +209,9 @@ class RoleController extends Controller
         $perm_finance = perm::where('role_id', $role->id)->where('name', "finance")->first();
         // dd($perm_sheet);
         $perm_cmnt = perm::where('role_id', $role->id)->where('name', "cmnt")->first();
-        return view('role.edit', compact('role','perm_role','perm_user','perm_dept','perm_desig','perm_veh','perm_leave','perm_holiday','perm_sheet', 'perm_cmnt', 'perm_finance'));
+        $perm_service = perm::where('role_id', $role->id)->where('name', "service")->first();
+        $perm_clients = perm::where('role_id', $role->id)->where('name', "clients")->first();
+        return view('role.edit', compact('role','perm_role','perm_user','perm_dept','perm_desig','perm_veh','perm_leave','perm_holiday','perm_sheet', 'perm_cmnt', 'perm_finance', 'perm_service', 'perm_clients'));
     }
 
     /**
@@ -424,6 +444,48 @@ class RoleController extends Controller
             'edit' => $request->finance_edit,
             'update' => $request->finance_update,
             'delete' => $request->finance_delete,
+        ]);
+    }
+
+    $perm_clients = perm::where('role_id', $role->id)->where('name', "clients")->first();
+    if(isset($perm_clients)){
+    $perm_clients->update([
+        'create' => $request->clients_create,
+        'view' => $request->clients_view,
+        'edit' => $request->clients_edit,
+        'update' => $request->clients_update,
+        'delete' => $request->clients_delete,
+    ]);
+    }
+    else
+    {
+        $perm_clients->create([
+            'create' => $request->finance_create,
+            'view' => $request->finance_view,
+            'edit' => $request->finance_edit,
+            'update' => $request->finance_update,
+            'delete' => $request->finance_delete,
+        ]);
+    }
+
+    $perm_service = perm::where('role_id', $role->id)->where('name', "service")->first();
+    if(isset($perm_service)){
+    $perm_service->update([
+        'create' => $request->service_create,
+        'view' => $request->service_view,
+        'edit' => $request->service_edit,
+        'update' => $request->service_update,
+        'delete' => $request->service_delete,
+    ]);
+    }
+    else
+    {
+        $perm_service->create([
+            'create' => $request->service_create,
+            'view' => $request->service_view,
+            'edit' => $request->service_edit,
+            'update' => $request->service_update,
+            'delete' => $request->service_delete,
         ]);
     }
 
