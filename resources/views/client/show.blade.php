@@ -71,7 +71,100 @@
                     </div> --}}
                 </div>
             </div>
+            {{-- @if (auth()->user()->role == 'admin' || auth()->user()->role == 'Creator') --}}
+            <div class="mt-6 lg:mt-0 flex-1 px-5 border-t lg:border-0 border-slate-200/60 dark:border-darkmode-400 pt-5 lg:pt-0">
+                <div class="font-medium text-center lg:text-left lg:mt-5">Upload Report</div>
+                <div class="flex items-center justify-center lg:justify-start mt-2">
+                    <div id="button-modal" class="p-5">
+                        <div class="preview">
+
+                            <!-- BEGIN: Modal Toggle -->
+                            <div class="text-center"> <a href="#" data-tw-toggle="modal"
+                                     class="btn btn-primary">Add Reports</a> </div>
+                            <!-- END: Modal Toggle -->
+                            <!-- BEGIN: Modal Content -->
+                            {{-- <div id="button-modal-preview" class="modal" tabindex="-1" aria-hidden="true">
+                                <div class="modal-dialog">
+                                    <div class="modal-content">
+                                        <a data-tw-dismiss="modal" href="javascript:;"> <i data-lucide="x"
+                                                class="w-8 h-8 text-slate-400"></i> </a>
+                                        <div class="modal-body p-5">
+                                            <div class="p-5 text-center">
+                                                <form action="{{ route('file-import') }}" method="POST" enctype="multipart/form-data">
+                                                    @csrf
+                                                    <div class="form-group ">
+                                                        <div class="grid grid-cols-12 gap-6 py-5" >
+
+                                                            <div class="col-span-12 lg:col-span-6" style="margin: auto 0;">
+                                                                <h2 style="font-size: 18px; font-weight: 600; text-align: left;">Landing Page Report</h2>
+                                                            </div>
+                                                            <div class="col-span-12 lg:col-span-6">
+                                                                <div class="fallback">
+                                                                    <label class="btn btn-primary">
+                                                                        Upload File <input  name="ladnigpage_file" type="file" name="file" accept=".csv, application/vnd.openxmlformats-officedocument.spreadsheetml.sheet, application/vnd.ms-excel" required style="display: none"/>
+                                                                    </label>
+                                                                </div>
+                                                            </div>
+                                                            <div class="col-span-12 lg:col-span-6" style="margin: auto 0;">
+                                                                <h2 style="font-size: 18px; font-weight: 600; text-align: left;">Social Media Report</h2>
+                                                            </div>
+                                                            <div class="col-span-12 lg:col-span-6">
+                                                                <div class="fallback">
+                                                                    <label class="btn btn-primary">
+                                                                        Upload File <input  name="social_file" type="file" name="file" accept=".csv, application/vnd.openxmlformats-officedocument.spreadsheetml.sheet, application/vnd.ms-excel" required style="display: none"/>
+                                                                    </label>
+                                                                </div>
+                                                            </div>
+                                                            <div class="col-span-12 lg:col-span-6" style="margin: auto 0;">
+                                                                <h2 style="font-size: 18px; font-weight: 600; text-align: left;">Website Report</h2>
+                                                            </div>
+                                                            <div class="col-span-12 lg:col-span-6">
+                                                                <div class="fallback">
+                                                                    <label class="btn btn-primary">
+                                                                        Upload File <input  name="website_file" type="file" name="file" accept=".csv, application/vnd.openxmlformats-officedocument.spreadsheetml.sheet, application/vnd.ms-excel" required style="display: none"/>
+                                                                    </label>
+                                                                </div>
+                                                            </div>
+                                                            <div class="col-span-12 lg:col-span-6" style="margin: auto 0;">
+                                                                <h2 style="font-size: 18px; font-weight: 600; text-align: left;">GMB Report</h2>
+                                                            </div>
+                                                            <div class="col-span-12 lg:col-span-6">
+                                                                <div class="fallback">
+                                                                    <label class="btn btn-primary">
+                                                                        Upload File <input  name="gmb_file" type="file" name="file" accept=".csv, application/vnd.openxmlformats-officedocument.spreadsheetml.sheet, application/vnd.ms-excel" required style="display: none"/>
+                                                                    </label>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+
+
+
+                                                    </div>
+
+
+                                            </div>
+                                            <div class="px-5 pb-8 text-center">
+                                                <button class="btn btn-primary">Submit Reports</button>
+
+                                            </div>
+                                            </form>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div> --}}
+                            <!-- END: Modal Content -->
+                        </div>
+                    </div>
+                    {{-- <div class="mr-2 w-50 flex"> Start Date: <span class="ml-3 font-medium text-success">{{$client->start_date}}</span> </div> --}}
+                    {{-- <div class="mr-2 w-50 flex"> Start Date: <span class="ml-3 font-medium text-success">{{$client->reporting_date}}</span> </div> --}}
+                    {{-- <div class="w-3/4">
+                        <div class="h-[55px]">
+                            <canvas class="simple-line-chart-1 -mr-5"></canvas>
+                        </div>
+                    </div> --}}
+                </div>
         </div>
+         {{-- @endif --}}
 
     </div>
     <!-- END: Profile Info -->

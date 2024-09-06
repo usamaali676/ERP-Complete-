@@ -100,7 +100,7 @@ class ClientController extends Controller
         // dd($reportday);
         // Carbon::parse()
         $currentmonth = Carbon::now()->format('F');
-        SlackAlert::message("Reporting Date of {$sale->business_name} is {$reportday} {$currentmonth} ! ");
+        // SlackAlert::message("Reporting Date of {$sale->business_name} is {$reportday} {$currentmonth} ! ");
         return view('client.show', compact('client','sale', ));
     }
 

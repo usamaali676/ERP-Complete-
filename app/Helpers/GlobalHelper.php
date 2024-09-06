@@ -3,6 +3,10 @@
 namespace App\Helpers;
 
 use Carbon\Carbon;
+use Illuminate\Support\Facades\File;
+use Illuminate\Contracts\Routing\UrlGenerator;
+
+// use Illuminate\Support\Facades\File;
 use Illuminate\Support\Facades\Route;
 
 class GlobalHelper
@@ -47,16 +51,40 @@ class GlobalHelper
     }
    public static function  fts_upload_img($img_file,$folder_name)
     {
-
         $imgpath = 'business/'.$folder_name;
         File::makeDirectory($imgpath, $mode = 0777, true, true);
         $imgDestinationPath = $imgpath.'/';
         $file_name = time()."_".$img_file->getClientOriginalName();
         $success = $img_file->move($imgDestinationPath, $file_name);
         return($file_name);
-
      }
 
+     public static function  fts_upload_report($img_file,$folder_name)
+     {
+         $imgpath = 'reports/'.$folder_name;
+         File::makeDirectory($imgpath, $mode = 0777, true, true);
+         $imgDestinationPath = $imgpath.'/';
+         $file_name = time()."_".$img_file->getClientOriginalName();
+         $success = $img_file->move($imgDestinationPath, $file_name);
+         return($file_name);
+      }
+
+   public static function  delete_report($img_file,$folder_name)
+    {
+        $imgpath = 'reports/'.$folder_name;
+        File::makeDirectory($imgpath, $mode = 0777, true, true);
+        $imgDestinationPath = $imgpath.'/';
+        $old_image=$imgDestinationPath.$img_file;
+        if (File::exists($old_image))
+        {
+            File::delete($old_image);
+            return true;
+        }
+        else
+        {
+            return false;
+        }
+    }
    public static function  delete_img($img_file,$folder_name)
     {
         $imgpath = 'business/'.$folder_name;

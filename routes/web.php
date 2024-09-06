@@ -23,6 +23,7 @@ use App\Http\Controllers\SalryController;
 use App\Http\Controllers\ClientController;
 use App\Http\Controllers\ServiceController;
 use App\Http\Controllers\TaskController;
+use App\Http\Controllers\ReportController;
 use App\Http\Livewire\TaskKanban;
 
 /*
@@ -57,6 +58,7 @@ Auth::routes([
 ]);
 Route::get('/profile', [HomeController::class, 'profile'])->name('profile');
 Route::get('/home', [HomeController::class, 'index'])->name('home');
+Route::get('/report-upload', [ClientController::class, 'uploadreport'])->name('report-upload');
 Route::controller(RoleController::class)
     ->prefix('role')
     ->as('role.')
@@ -246,7 +248,7 @@ Route::controller(DepartmentController::class)
     Route::controller(ServiceController::class)
     ->prefix('service')
     ->as('service.')
-    // ->middleware('FinancePermission')
+    ->middleware('ReuseableMiddleware')
     ->group(function () {
         Route::get('index', 'index')->name('index');
         Route::get('add/', 'create')->name('create');
@@ -260,7 +262,7 @@ Route::controller(DepartmentController::class)
     Route::controller(ClientController::class)
     ->prefix('clients')
     ->as('clients.')
-    // ->middleware('FinancePermission')
+    ->middleware('ReuseableMiddleware')
     ->group(function () {
         Route::get('index', 'index')->name('index');
         Route::get('add/{id}', 'create')->name('create');
@@ -287,6 +289,21 @@ Route::controller(DepartmentController::class)
         Route::get('conf-delete/{id}', 'delete')->name('conf-delete');
         Route::get('delete/{id}', 'destroy')->name('delete');
         Route::get('status-update', 'updateStatus')->name('status_update');
+    });
+
+    Route::controller(ReportController::class)
+    ->prefix('reports')
+    ->as('reports.')
+    // ->middleware('FinancePermission')
+    ->group(function () {
+        Route::get('index/{client}', 'index')->name('index');
+        Route::get('add/{client}', 'create')->name('create');
+        Route::post('store', 'store')->name('store');
+        Route::get('edit/{id}', 'edit')->name('edit');
+        Route::post('update/{id}', 'update')->name('update');
+        Route::get('detail/{id}',  'show')->name('detail');
+        Route::get('conf-delete/{id}', 'delete')->name('conf-delete');
+        Route::get('delete/{id}', 'destroy')->name('delete');
     });
 
     // Ajax

@@ -6,6 +6,7 @@ return [
      */
     'webhook_urls' => [
         'default' => env('SLACK_ALERT_WEBHOOK'),
+        'scrum' => 'https://hooks.slack.com/services/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'
 
     ],
 

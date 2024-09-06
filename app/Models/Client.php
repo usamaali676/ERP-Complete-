@@ -32,4 +32,8 @@ class Client extends Model
         {
             return $this->hasMany(Task::class);
         }
+        public function reports()
+        {
+            return $this->hasMany(Report::class);
+        }
 }

@@ -9,6 +9,7 @@ use App\Models\User;
 use Carbon\Carbon;
 use RealRashid\SweetAlert\Facades\Alert;
 use Illuminate\Support\Facades\Auth;
+use Spatie\SlackAlerts\Facades\SlackAlert;
 
 class TaskController extends Controller
 {
@@ -91,8 +92,11 @@ class TaskController extends Controller
             'status' => "Not Started"
         ]);
         $task->users()->sync($request->input('users', []));
+        $userNames = $task->users->pluck('name');
         Alert::success('Success', "Task Added Successfully");
-        return redirect()->route('clients.create', $request->client_id );
+        SlackAlert::to('scrum')->message("New Task Added for {$userNames} Please Checkout Your TaskBoard");
+        return redirect()->back();
+        // return redirect()->route('clients.edit', $request->client_id );
     }
 
     /**
