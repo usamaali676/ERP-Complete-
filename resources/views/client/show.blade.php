@@ -2,7 +2,8 @@
     $total_task = $client->tasks->count(); // Total count
 
     $complete_task = $client->tasks()->where('status', "Complete")->count();
-    if(isset($complete_task)){ // Current amount
+    if(isset($complete_task) && $complete_task != 0){ // Current amount
+        dd($complete_task);
     $complete_task_percent = ($complete_task / $total_task) * 100;
     }
     else{
@@ -10,7 +11,7 @@
     }
     $pending_task = $client->tasks()->where('status', "Not Started")->count();
     // dd($pending_task);
-    if(isset($pending_task)){ // Current amount
+    if(isset($pending_task) && $pending_task != 0){ // Current amount
         // dd($pending_task);
     $pending_task_percent = ($pending_task / $total_task) * 100;
     // dd($pending_task_percent);
@@ -19,7 +20,7 @@
         $pending_task_percent = 0;
     }
     $progress_task = $client->tasks()->where('status', "In progress")->count();
-    if(isset($progress_task)){ // Current amount
+    if(isset($progress_task) && $progress_task != 0){ // Current amount
     $progress_task_percent = ($progress_task / $total_task) * 100;
     }
     else{

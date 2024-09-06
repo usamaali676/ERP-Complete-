@@ -146,7 +146,7 @@
                             <div class="mt-2">
                                 <div class="hiddenCB">
                                     <h3>Select Services</h3>
-                                    <div style="display: flex; gap: 10px">
+                                    <div style="display: flex;   flex-wrap: wrap; gap: 10px">
                                         @foreach($services as $service)
                                             <input type="checkbox" name="services[]" value="{{ $service->id }}" id="{{ $service->id}}"> <label for="{{ $service->id}}">{{ $service->name }} </label>
                                         @endforeach

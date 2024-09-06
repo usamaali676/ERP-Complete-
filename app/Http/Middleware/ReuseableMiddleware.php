@@ -31,7 +31,7 @@ class ReuseableMiddleware
             if ($routeNameMatches = $this->matchRouteWithPermissionName($routeName)) {
                 $perms = perm::where('role_id', $role->id)->where('name', $routeNameMatches['permissionName'])->first();
                 // dd($perms);
-                // $hasPermission = $perms->view == 1;
+                // $hasPermission = $perms->delete == 1;
                 // dd($hasPermission);
                 // dd($routeNameMatches['operation']);
                 switch ($routeNameMatches['operation']) {
@@ -52,6 +52,7 @@ class ReuseableMiddleware
                         break;
                     case 'delete':
                         $hasPermission = $perms->delete == 1;
+                        // dd($hasPermission);
                         break;
                     default:
                         $hasPermission = false;
@@ -75,8 +76,8 @@ class ReuseableMiddleware
             // dd($routeName);
             $matches = [];
 
-            preg_match('/^(?P<entity>[a-z]+)\.(?P<operation>index|view|create|edit|update|delete )$/i', $routeName, $matches);
-
+            preg_match('/^(?P<entity>[a-z]+)\.(?P<operation>index|view|create|edit|update|delete|conf-delete )$/i', $routeName, $matches);
+            // dd($matches);
             if (count($matches) > 2) {
                 // dd($matches);
                 return [

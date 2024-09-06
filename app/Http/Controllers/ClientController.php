@@ -67,6 +67,11 @@ class ClientController extends Controller
         if(isset($request->landingpage_date)){
         $landingpageDate = Carbon::parse($request->landingpage_date)->format('Y-m-d');
         }
+        else
+        {
+            $landingpageDate = null;
+        }
+
         $startDate = Carbon::parse($request->start_date)->format('Y-m-d');
         $endDate = Carbon::parse($request->end_date)->format('Y-m-d');
         // dd($startDate, $endDate);

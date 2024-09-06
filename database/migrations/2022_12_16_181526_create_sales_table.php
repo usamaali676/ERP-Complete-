@@ -15,8 +15,7 @@ class CreateSalesTable extends Migration
     {
         Schema::create('sales', function (Blueprint $table) {
             $table->id();
-            $table->string('agent_name');
-            $table->string('closer_name');
+
             $table->string('business_name');
             $table->string('business_name_adv')->nullable();
             $table->string('business_number');
@@ -31,6 +30,10 @@ class CreateSalesTable extends Migration
             $table->text('services');
             $table->text('keywords');
             $table->text('landing_pages');
+            $table->unsignedBigInteger('agent_id');
+            $table->unsignedBigInteger('closer_id');
+            $table->foreign('agent_id')->references('id')->on('users');
+            $table->foreign('closer_id')->references('id')->on('users');
             $table->timestamps();
         });
     }

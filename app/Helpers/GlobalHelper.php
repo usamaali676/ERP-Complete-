@@ -29,9 +29,9 @@ class GlobalHelper
         if (!empty($name['as'])) {
             $permission = $name['as'];
             $permission = trim(strtolower($permission));
-            $permission = str_replace(['.index','.add','.store','.edit','.update','.delete','.single'], '', $permission);
+            $permission = str_replace(['.index','.add','.store','.edit','.update','.delete','.single', 'show', 'destroy'], '', $permission);
             // $permission = preg_match('/^(?P<entity>[a-z]+)\.(?P<operation>index|view|create|edit|update|delete|conf-delete)$/i',  $permission);
-            $ignoreRoutesStartingWith = 'sanctum|livewire|ignition|verification|dashboard|password|logout|register|login|front|contact|listing|search|singcat|cities|test|filter|home|area.destroy';
+            $ignoreRoutesStartingWith = 'sanctum|livewire|ignition|verification|dashboard|password|logout|register|login|front|contact|listing|search|singcat|cities|test|filter|home|area.destroy|filament';
             $permissionFilled = trim(str_replace("user management ", '', $permission));
             if (preg_match("($ignoreRoutesStartingWith)", $permission) === 0 && filled($permissionFilled)) $permissions[] = $permissionFilled;
             // $permission = preg_match('/^(?P<entity>[a-z]+)\.(?P<operation>index|view|create|edit|update|delete|conf-delete)$/i',  $permission);

@@ -332,7 +332,7 @@
                             </div>
                         </div>
                         <div class="mt-3">
-                            <label for="regular-form-3" class="form-label">Projrcts</label>
+                            <label for="regular-form-3" class="form-label">Projects</label>
                             <div class="flex flex-col sm:flex-row mt-2">
                                 <div class="form-check mr-2">
                                     <input class="form-check-input" type="hidden" value="0" name="clients_create">
