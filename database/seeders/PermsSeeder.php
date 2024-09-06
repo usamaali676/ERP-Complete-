@@ -17,7 +17,7 @@ class PermsSeeder extends Seeder
     public function run()
     {
         $role = Role::all();
-        $routeCollection = ['clients', 'service'];
+        $routeCollection = GlobalHelper::Permissions();
         foreach($routeCollection as $route){
             foreach($role as $item){
             if($item->id == 1){

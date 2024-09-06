@@ -10,7 +10,7 @@
         $permdesig = App\Models\perm::where('role_id', $user->role_id)->where('name', "desig")->first();
         $permveh = App\Models\perm::where('role_id', $user->role_id)->where('name', "vehicle")->first();
         $permleave = App\Models\perm::where('role_id', $user->role_id)->where('name', "leave")->first();
-        $permsheet = App\Models\perm::where('role_id', $user->role_id)->where('name', "Sales")->first();
+        $permsheet = App\Models\perm::where('role_id', $user->role_id)->where('name', "sales")->first();
         $permfinance = App\Models\perm::where('role_id', $user->role_id)->where('name', "finance")->first();
 
         ?>

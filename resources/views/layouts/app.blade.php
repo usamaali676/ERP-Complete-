@@ -31,7 +31,9 @@ License: You must have a valid license purchased only from themeforest(the above
             <!-- END: Content -->
         </div>
 
-        @include('sweetalert::alert')
+        {{-- @include('sweetalert::alert') --}}
+        @include('sweetalert::alert', ['cdn' => "https://cdn.jsdelivr.net/npm/sweetalert2@9"])
+
         <!-- BEGIN: JS Assets-->
         {{-- @yield('js') --}}
       @include('layouts.Component.footer')

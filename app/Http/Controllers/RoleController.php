@@ -105,7 +105,7 @@ class RoleController extends Controller
     //         'delete' => $request->leave_delete,
     //    ]);
        perm::create([
-        'name' => "Sales",
+        'name' => "sales",
         'role_id' => $role->id,
         'create' => $request->sheet_create,
         'view' => $request->sheet_view,
@@ -205,7 +205,7 @@ class RoleController extends Controller
         $perm_veh = perm::where('role_id', $role->id)->where('name', "vehicle")->first();
         $perm_leave = perm::where('role_id', $role->id)->where('name', "leave")->first();
         $perm_holiday = perm::where('role_id', $role->id)->where('name', "holiday")->first();
-        $perm_sheet = perm::where('role_id', $role->id)->where('name', "Sales")->first();
+        $perm_sheet = perm::where('role_id', $role->id)->where('name', "sales")->first();
         $perm_finance = perm::where('role_id', $role->id)->where('name', "finance")->first();
         // dd($perm_sheet);
         $perm_cmnt = perm::where('role_id', $role->id)->where('name', "cmnt")->first();
@@ -366,7 +366,7 @@ class RoleController extends Controller
     //         'delete' => $request->leave_delete,
     //     ]);
     // }
-    $perm_sales = perm::where('role_id', $role->id)->where('name', "Sales")->first();
+    $perm_sales = perm::where('role_id', $role->id)->where('name', "sales")->first();
     if(isset($perm_sales)) {
     $perm_sales->update([
         'create' => $request->sheet_create,
