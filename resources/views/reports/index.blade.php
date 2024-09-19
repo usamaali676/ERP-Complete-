@@ -1,6 +1,6 @@
 @extends('layouts.app')
 @section('css')
-    <link rel="stylesheet" href="https://cdn.datatables.net/2.1.5/css/dataTables.dataTables.css">
+    {{-- <link rel="stylesheet" href="https://cdn.datatables.net/2.1.5/css/dataTables.dataTables.css"> --}}
 @endsection
 @section('content')
 @if(Auth::check())
@@ -88,8 +88,8 @@ if (!isset($client))
         <!-- END: Content -->
 @endsection
 @section('js')
-<script src="https://code.jquery.com/jquery-3.7.1.js"></script>
-<script src="https://cdn.datatables.net/2.1.5/js/dataTables.js"></script>
+{{-- <script src="https://code.jquery.com/jquery-3.7.1.js"></script> --}}
+{{-- <script src="https://cdn.datatables.net/2.1.5/js/dataTables.js"></script> --}}
 <script>
 $('#example').DataTable({
     initComplete: function () {

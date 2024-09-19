@@ -14,8 +14,8 @@ class AddHalfDaysToSalriesTable extends Migration
     public function up()
     {
         Schema::table('salries', function (Blueprint $table) {
-            $table->bigInteger('unpaid_days');
-            $table->bigInteger('half_days');
+            $table->bigInteger('unpaid_days')->nullable();
+            $table->bigInteger('half_days')->nullable();
         });
     }
 

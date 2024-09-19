@@ -315,15 +315,36 @@
                 $('#p_holiday_label').html(holiday);
                 $("input[name='holiday_compen']").attr("max", data.holiday.remaining);
                 $("input[name='security_deduct']").val(user.Security);
-                advance = '(Total Advance: ' + data.advance.amount + ')'
+                if (data.advance != null && data.advance){
+                advance = '(Total Advance: ' + data.advance.amount +')';
+                }
+                else
+                {
+                    advance = 0;
+                }
                 $('#advance_label').html(advance);
-                $("input[name='advance_deduct']").attr("max", data.advance.amount);
+                if (data.advance != null && data.advance){
+                    $("input[name='advance_deduct']").attr("max", data.advance.amount);
+                }
+                if(data.security.total === 0 || data.security.total === null){
+                    $("input[name='security_clearance']").attr("readonly", "readonly");
+                }
+                else {
+                    $("input[name='security_clearance']").removeAttr("readonly");
+                }
                 total_security = '(Total Security: ' + data.security.total +')';
                 $('#total_security_label').html(total_security);
                 $("input[name='security_clearance']").attr("max", data.security.total);
+                if(data.security.total_months === 0 || data.security.total_months === null){
+                    $("input[name='cleared_months']").attr("readonly", "readonly");
+                }
+                else {
+                    $("input[name='cleared_months']").removeAttr("readonly");
+                }
                 security_month = '(Total Months: ' + data.security.total_months + ')';
                 $('#total_security_months').html(security_month);
                 $("input[name='cleared_months']").attr("max", data.security.total_months);
+
                 }
             });
         });

@@ -92,9 +92,9 @@ class TaskController extends Controller
             'status' => "Not Started"
         ]);
         $task->users()->sync($request->input('users', []));
-        $userNames = $task->users->pluck('name');
+        // $userNames = $task->users->pluck('name');
         Alert::success('Success', "Task Added Successfully");
-        SlackAlert::to('scrum')->message("New Task Added for {$userNames} Please Checkout Your TaskBoard");
+        // SlackAlert::to('scrum')->message("New Task Added for {$userNames} Please Checkout Your TaskBoard");
         return redirect()->back();
         // return redirect()->route('clients.edit', $request->client_id );
     }

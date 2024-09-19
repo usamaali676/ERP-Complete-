@@ -169,7 +169,7 @@ Fax: (123) 456-7890
 </address>
 </div> --}}
 <div class="invoice-date">
-<small>Invoice / {{ \Carbon\Carbon::parse($salary->date)->subMonth()->format('M')}}  period</small>
+<small>Invoice / {{ Str::upper($salary->salary_month)}}  Period</small>
 <div class="date text-inverse m-t-5">{{$salary->date}}</div>
 <div class="invoice-detail">
 #{{$salary->tracker_id}}<br>

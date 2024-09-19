@@ -14,7 +14,7 @@ class AddClearedToMonthlySecuritiesTable extends Migration
     public function up()
     {
         Schema::table('monthly_securities', function (Blueprint $table) {
-            $table->boolean('cleared')->defaultFalse();
+            $table->boolean('cleared')->default(0);
         });
     }
 

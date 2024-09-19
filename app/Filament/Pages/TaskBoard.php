@@ -36,8 +36,10 @@ class TaskBoard extends KanbanBoard
     protected function records(): Collection
     {
         $user = Auth::user();
+        $oneWeekAgo = now()->subWeek();
         if($user->role_id == '1'){
-            return Task::latest('created_at',)->get();
+            return Task::where('created_at', '>=', $oneWeekAgo)
+            ->latest('created_at',)->get();
         }
         else{
 
@@ -46,6 +48,7 @@ class TaskBoard extends KanbanBoard
             ->whereHas('users', function ($query) use ($user) {
                 $query->where('users.id', $user->id);
             })
+            ->where('created_at', '>=', $oneWeekAgo)
             ->get();
 
             // dd($tasks);

@@ -173,15 +173,15 @@ class RoleController extends Controller
     public function show($id)
     {
         $role = Role::find($id);
-        $permission =  $role->permissions;
+        // $permission =  $role->permissions;
         $perm = perm::all();
-        return view('role.detail', compact('role', 'permission', 'perm'));
+        return view('role.detail', compact('role',  'perm'));
     }
     public function delete($id)
     {
         $role = Role::find($id);
-        $permission =  $role->permissions;
-        return view('role.delete', compact('role', 'permission'));
+        // $permission =  $role->permissions;
+        return view('role.delete', compact('role', ));
     }
 
     /**

@@ -4,7 +4,7 @@
     <div class="content content--top-nav">
         <div class="intro-y flex items-center mt-8">
             <h2 class="text-lg font-medium mr-auto">
-                Create User
+                Edit User
             </h2>
         </div>
         <!-- BEGIN: Input -->

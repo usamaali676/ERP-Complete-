@@ -84,6 +84,7 @@ class SalryController extends Controller
         $request->validate([
             'year' => 'required',
             'month' => 'required',
+            'basic_salary' => 'required',
             'user_id' => 'required',
             'security_deduct' => 'required',
             'working_days' => 'required',
@@ -369,12 +370,14 @@ class SalryController extends Controller
             'remaining' => $remainholiday,
         ]);
         $monthly_holiday = MonthlyHoliday::where('holiday_cycle_id', $holidaycycle->id)->first();
-        $monthly_holiday->update([
-            'holiday_cycle_id' => $holidaycycle->id,
-            'year_id' => $year->id,
-            'month' => $request->month,
-            'holidays' => $request->holiday_compen
-        ]);
+        if(isset($monthly_holiday)){
+            $monthly_holiday->update([
+                'holiday_cycle_id' => $holidaycycle->id,
+                'year_id' => $year->id,
+                'month' => $request->month,
+                'holidays' => $request->holiday_compen
+            ]);
+        }
         $salary['holiday_compen'] = $request->holiday_compen;
 
         $salary->update();

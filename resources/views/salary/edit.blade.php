@@ -100,14 +100,14 @@
                                         <div class="mt-2">
                                             <label for="regular-form-3" class="form-label">Name</label>
                                             <div class="mt-2">
-                                                <select id="user_select"data-placeholder="Select Designation" class="tom-select w-full" name="user_id">
+                                                <select id="user_select"data-placeholder="Select Designation" class="tom-select w-full" name="user_id" readonly>
                                                     @if(isset($selecteduser))
                                                      <option value="{{ $selecteduser->id }}">{{ $selecteduser->name }}</option>
                                                     @else
                                                     <option >Please Select</option>
                                                     @endif
                                                     @foreach ($user as $item)
-                                                    <option value="{{ $item->id }}">{{ $item->name }}</option>
+                                                    <option value="{{ $item->id }}" disabled>{{ $item->name }}</option>
                                                     @endforeach
                                                 </select>
                                             </div>
