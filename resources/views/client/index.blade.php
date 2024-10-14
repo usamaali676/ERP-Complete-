@@ -6,6 +6,7 @@
 $user = Auth::user();
 $perm = App\Models\perm::where('role_id', $user->role_id)->where('name', "clients")->first();
 $permuser = App\Models\perm::where('role_id', $user->role_id)->where('name', "Users")->first();
+$permreports = App\Models\perm::where('role_id', $user->role_id)->where('name', "reports")->first();
 ?>
 @endif
         <!-- BEGIN: Content -->
@@ -56,7 +57,9 @@ $permuser = App\Models\perm::where('role_id', $user->role_id)->where('name', "Us
                                                                 @if($perm->delete == 1  )
                                                                 <a  href="{{route('clients.conf-delete', $item->id)}}"  class="btn btn-danger mr-1 mb-2"> <i data-lucide="trash" class="w-5 h-5"></i> </a>
                                                                 @endif
-                                                                <a  href="{{route('reports.index', $item->id)}}"  class="btn btn-primary mr-1 mb-2"> <i data-lucide="clipboard" class="w-5 h-5"></i> </a>
+                                                                @if ($permreports->view == 1)
+                                                                    <a  href="{{route('reports.index', $item->id)}}"  class="btn btn-primary mr-1 mb-2"> <i data-lucide="clipboard" class="w-5 h-5"></i> </a>
+                                                                @endif
                                                             </td>
                                                         </tr>
                                                         @endforeach

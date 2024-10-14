@@ -74,7 +74,7 @@
                     </div>
                 </div>
                                             <!-- BEGIN: Sales Report -->
-                                            <div class="col-span-12 lg:col-span-6 mt-8">
+                                            {{-- <div class="col-span-12 lg:col-span-6 mt-8">
                                                 <div class="intro-y block sm:flex items-center h-10">
                                                     <h2 class="text-lg font-medium truncate mr-5">
                                                         Sales Report
@@ -116,7 +116,7 @@
                                                         </div>
                                                     </div>
                                                 </div>
-                                            </div>
+                                            </div> --}}
                                             <!-- END: Sales Report -->
             </div>
 
@@ -288,7 +288,7 @@
                 </div> --}}
                 <!-- END: Recent Activities -->
                 <!-- BEGIN: Important Notes -->
-                <div class="col-span-12 md:col-span-6 xl:col-span-12 xl:col-start-1 xl:row-start-1 2xl:col-start-auto 2xl:row-start-auto mt-3">
+                {{-- <div class="col-span-12 md:col-span-6 xl:col-span-12 xl:col-start-1 xl:row-start-1 2xl:col-start-auto 2xl:row-start-auto mt-3">
                     <div class="intro-x flex items-center h-10">
                         <h2 class="text-lg font-medium truncate mr-auto">
                             Important Notes
@@ -329,7 +329,7 @@
                             </div>
                         </div>
                     </div>
-                </div>
+                </div> --}}
                 <!-- END: Important Notes -->
                 <!-- BEGIN: Schedules -->
                 {{-- <div class="col-span-12 md:col-span-6 xl:col-span-4 2xl:col-span-12 xl:col-start-1 xl:row-start-2 2xl:col-start-auto 2xl:row-start-auto mt-3">

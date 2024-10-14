@@ -12,6 +12,9 @@
         $permleave = App\Models\perm::where('role_id', $user->role_id)->where('name', "leave")->first();
         $permsheet = App\Models\perm::where('role_id', $user->role_id)->where('name', "sales")->first();
         $permfinance = App\Models\perm::where('role_id', $user->role_id)->where('name', "finance")->first();
+        $permclients = App\Models\perm::where('role_id', $user->role_id)->where('name', "clients")->first();
+        $permservice = App\Models\perm::where('role_id', $user->role_id)->where('name', "service")->first();
+        $permtask = App\Models\perm::where('role_id', $user->role_id)->where('name', "task")->first();
 
         ?>
         @endif
@@ -270,7 +273,7 @@
             </a>
         </li>
         @endif
-
+        @if ($permclients->view == 1 )
         <li >
             <a href="{{route('clients.index')}}" class="side-menu">
                 &nbsp; &nbsp;&nbsp; &nbsp;
@@ -280,6 +283,8 @@
                 </div>
             </a>
         </li>
+        @endif
+        @if ($permservice->view == 1 )
         <li >
             <a href="{{route('service.index')}}" class="side-menu">
                 &nbsp; &nbsp;&nbsp; &nbsp;
@@ -289,6 +294,8 @@
                 </div>
             </a>
         </li>
+        @endif
+        @if ($permtask->view == 1 )
         <li >
             <a href="/public/task-board" class="side-menu">
                 &nbsp; &nbsp;&nbsp; &nbsp;
@@ -298,6 +305,7 @@
                 </div>
             </a>
         </li>
+        @endif
 
 
     </ul>

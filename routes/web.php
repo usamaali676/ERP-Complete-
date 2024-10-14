@@ -171,7 +171,7 @@ Route::controller(DepartmentController::class)
         Route::get('delete/{id}', 'destroy')->name('delete');
     });
     Route::controller(HolidayCycleController::class)
-    ->prefix('paid-holidays')
+    ->prefix('holiday') 
     ->as('holiday.')
     ->middleware('ReuseableMiddleware')
     ->group(function () {
@@ -277,7 +277,7 @@ Route::controller(DepartmentController::class)
     Route::controller(TaskController::class)
     ->prefix('task')
     ->as('task.')
-    // ->middleware('FinancePermission')
+    ->middleware('FinancePermission')
     ->group(function () {
         Route::get('index', 'index')->name('index');
         Route::get('board', 'board')->name('board');

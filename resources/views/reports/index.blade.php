@@ -7,7 +7,7 @@
 <?php
 // $mperm = App\Models\perm;
 $user = Auth::user();
-// $perm = App\Models\perm::where('role_id', $user->role_id)->where('name', "reports")->first();
+$perm = App\Models\perm::where('role_id', $user->role_id)->where('name', "reports")->first();
 // $permuser = App\Models\perm::where('role_id', $user->role_id)->where('name', "Users")->first();
 // $permsheet = App\Models\perm::where('role_id', $user->role_id)->where('name', "Sales")->first();
 if (!isset($client))
@@ -22,9 +22,9 @@ if (!isset($client))
                 <h2 class="text-lg font-medium mr-auto">
                     Reports
                 </h2>
-               {{-- @if ($perm->create == 1) --}}
+               @if ($perm->create == 1)
                <a href="{{route('reports.create', $client->id)}}" class="btn btn-primary shadow-md mr-2">Add New Report</a>
-               {{-- @endif --}}
+               @endif
             </div>
                                 <!-- BEGIN: Striped Rows -->
                                 <div class="intro-y box mt-5">
@@ -65,11 +65,15 @@ if (!isset($client))
                                                                 {{-- @if($perm->edit == 1 && $item->id != 1) --}}
                                                                 {{-- <a class="btn btn-warning mr-1 mb-2" href="{{ route('role.edit',$item->id) }}" > <i data-lucide="edit" style="color: #fff" class="w-5 h-5"></i> </a> --}}
                                                                 {{-- @endif --}}
-                                                                {{-- @if($perm->view == 1) --}}
+                                                                @if($perm->view == 1)
                                                                 <a href="{{ asset('reports/' . $item->month . '/' . $item->file_path) }}" target="_blank" class="btn btn-success mr-1 mb-2"> <i data-lucide="eye" class="w-5 h-5" style="color: #fff"></i> </a>
+                                                                @endif
+                                                                @if($perm->edit == 1  )
                                                                 <a href="{{ route('reports.edit', $item->id)}}" class="btn btn-warning mr-1 mb-2"> <i data-lucide="repeat" class="w-5 h-5" style="color: #fff"></i> </a>
+                                                                @endif
+                                                                @if($perm->delete == 1)
                                                                 <a href="{{ route('reports.delete',  $item->id)}}" onclick="return confirm('Are you sure you want to delete this item')"  class="btn btn-danger mr-1 mb-2"> <i data-lucide="trash" class="w-5 h-5" style="color: #fff"></i> </a>
-                                                                {{-- @endif --}}
+                                                                @endif
                                                                 {{-- @if($perm->delete == 1  && $item->id != 1) --}}
                                                                 {{-- <a href="{{route('role.conf-delete', $item->id)}}" class="btn btn-danger mr-1 mb-2"> <i data-lucide="trash" class="w-5 h-5"></i> </a> --}}
                                                                 {{-- @endif --}}
